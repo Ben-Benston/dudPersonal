@@ -454,6 +454,15 @@
         };
 
         toggleEdit.addEventListener('click', () => {
+            if (toggleEdit.innerHTML === 'edit') {
+                toggleEdit.innerHTML = 'remove_circle_outline';
+                toggleEdit.classList.remove('text-green-600');
+                toggleEdit.classList.add('text-red-600');
+            } else {
+                toggleEdit.innerHTML = 'edit';
+                toggleEdit.classList.remove('text-red-600');
+                toggleEdit.classList.add('text-green-600');
+            }
             viewMode.classList.toggle('hidden');
             healthForm.classList.toggle('hidden');
             updateForm();
