@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alice&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <title>Document</title>
+    <title>Data Update Drive</title>
     <style>
         .whiteBar {
             background-image: url('Motif_Central_White.png');
@@ -27,6 +27,10 @@
 
         .textCol {
             color: #b98027;
+        }
+
+        .accentTextCol {
+            accent-color: #b98027;
         }
 
         .alice-regular {
@@ -57,8 +61,7 @@
 
 <body style="background-color: #61a0b1;" class="py-5 relative">
     <div class="whiteBar"></div>
-    <div class="bg-white p-4 mx-4 sm:mx-6 rounded-3xl shadow-lg">
-        <!-- Header Section -->
+    <div class="bg-white p-4 mx-4 sm:mx-6 rounded-2xl shadow-lg">
         <div class="relative flex items-center justify-between w-full mb-4">
             <div class="textCol alice-regular text-2xl flex items-center gap-2">
                 Data Update Drive V6.9
@@ -71,98 +74,82 @@
                 50462453 | Burhanuddin Bhai Mustafa Bhai Nasikwala
             </div>
         </div>
-        <!-- Golden Bar -->
         <div class="goldenBar mb-4"></div>
-        <!-- Icon Bar -->
         <div class="relative flex flex-wrap place-content-evenly p-5 gap-4">
-            <div class="icon-wrapper">
-                <i class="material-icons textCol icons-b">account_tree</i>
+            <div class="icon-wrapper"><i class="material-icons textCol icons-b">account_tree</i>
                 <p class="textCol text-sm">Personal</p>
             </div>
-            <div class="icon-wrapper">
-                <i class="material-icons textCol icons-b">call</i>
+            <div class="icon-wrapper"><i class="material-icons textCol icons-b">call</i>
                 <p class="textCol text-sm">Contact</p>
             </div>
-            <div class="icon-wrapper">
-                <i class="material-icons textCol icons-b">home</i>
+            <div class="icon-wrapper"><i class="material-icons textCol icons-b">home</i>
                 <p class="textCol text-sm">Residence</p>
             </div>
-            <div class="icon-wrapper">
-                <i class="material-icons textCol icons-b">school</i>
+            <div class="icon-wrapper"><i class="material-icons textCol icons-b">school</i>
                 <p class="textCol text-sm">Education</p>
             </div>
-            <div class="icon-wrapper">
-                <i class="material-icons textCol icons-b">work</i>
+            <div class="icon-wrapper"><i class="material-icons textCol icons-b">work</i>
                 <p class="textCol text-sm">Occupation</p>
             </div>
-            <div class="icon-wrapper">
-                <i class="material-icons textCol icons-b">contact_mail</i>
+            <div class="icon-wrapper"><i class="material-icons textCol icons-b">contact_mail</i>
                 <p class="textCol text-sm">Contact Mail</p>
             </div>
-            <div class="icon-wrapper">
-                <i class="material-icons textCol icons-b">explore</i>
+            <div class="icon-wrapper"><i class="material-icons textCol icons-b">explore</i>
                 <p class="textCol text-sm">Ziyarat</p>
             </div>
-            <div class="icon-wrapper">
-                <i class="material-icons textCol icons-b">menu_book</i>
+            <div class="icon-wrapper"><i class="material-icons textCol icons-b">menu_book</i>
                 <p class="textCol text-sm">Asbaaq</p>
             </div>
-            <div class="icon-wrapper">
-                <i class="material-icons textCol icons-b">cloud_upload</i>
+            <div class="icon-wrapper"><i class="material-icons textCol icons-b">cloud_upload</i>
                 <p class="textCol text-sm">Upload</p>
             </div>
-            <div class="icon-wrapper">
-                <i class="material-icons textCol icons-b">list</i>
+            <div class="icon-wrapper"><i class="material-icons textCol icons-b">list</i>
                 <p class="textCol text-sm">Summary</p>
             </div>
-            <div class="icon-wrapper">
-                <i class="material-icons textCol icons-b">beenhere</i>
+            <div class="icon-wrapper"><i class="material-icons textCol icons-b">beenhere</i>
                 <p class="textCol text-sm">Status</p>
             </div>
         </div>
     </div>
     <br>
-    <div class="bg-white p-4 mx-4 sm:mx-6 rounded-3xl shadow-lg">
-        <!-- Header -->
+    <div class="bg-white p-4 mx-4 sm:mx-6 rounded-2xl shadow-lg">
         <div class="flex justify-between items-center mb-4">
             <div class="textCol alice-regular text-2xl">HEALTH DETAILS</div>
             <i class="material-icons text-green-600 cursor-pointer" id="toggleEdit">edit</i>
         </div>
-        <!-- Golden Bar -->
         <div class="goldenBar mb-4"></div>
-        <!-- Health Details Content -->
         <div id="healthContent">
-            <!-- View Mode -->
-            <div id="viewMode" class="hidden">
+            <div id="viewMode">
                 <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                    <p class="border-solid border-2 border-gray-500 rounded-3xl p-3"><strong>Blood Group:</strong> <span
+                    <p class="border-solid border-2 border-gray-500 rounded-2xl p-3"><strong>Blood Group:</strong> <span
                             id="viewBloodGroup"></span></p>
-                    <p class="border-solid border-2 border-gray-500 rounded-3xl p-3"><strong>Blood Donating
+                    <p class="border-solid border-2 border-gray-500 rounded-2xl p-3"><strong>Blood Donating
                             Preference:</strong> <span id="viewBloodPreference"></span></p>
-                    <p class="border-solid border-2 border-gray-500 rounded-3xl p-3"><strong>Chronic Diseases:</strong>
-                        <span id="viewChronicDiseases"></span></p>
-                    <p class="border-solid border-2 border-gray-500 rounded-3xl p-3"><strong>Fitness Activity:</strong>
-                        <span id="viewFitnessActivity"></span></p>
-                    <p class="border-solid border-2 border-gray-500 rounded-3xl p-3"><strong>Sports Activity:</strong>
-                        <span id="viewSportsActivity"></span></p>
-                    <p class="border-solid border-2 border-gray-500 rounded-3xl p-3"><strong>Height:</strong> <span
-                            id="viewHeight"></span></p>
-                    <p class="border-solid border-2 border-gray-500 rounded-3xl p-3"><strong>Weight:</strong> <span
-                            id="viewWeight"></span></p>
-                    <p class="border-solid border-2 border-gray-500 rounded-3xl p-3"><strong>BMI:</strong> <i
-                            class="material-icons inline-block">person</i> <span id="viewBMI"></span>
+                    <p class="border-solid border-2 border-gray-500 rounded-2xl p-3"><strong>Chronic Diseases:</strong>
+                        <span id="viewChronicDiseases"></span>
                     </p>
+                    <p class="border-solid border-2 border-gray-500 rounded-2xl p-3"><strong>Fitness Activity:</strong>
+                        <span id="viewFitnessActivity"></span>
+                    </p>
+                    <p class="border-solid border-2 border-gray-500 rounded-2xl p-3"><strong>Sports Activity:</strong>
+                        <span id="viewSportsActivity"></span>
+                    </p>
+                    <p class="border-solid border-2 border-gray-500 rounded-2xl p-3"><strong>Height:</strong> <span
+                            id="viewHeight"></span></p>
+                    <p class="border-solid border-2 border-gray-500 rounded-2xl p-3"><strong>Weight:</strong> <span
+                            id="viewWeight"></span></p>
+                    <p class="border-solid border-2 border-gray-500 rounded-2xl p-3"><strong>BMI:</strong> <i
+                            class="material-icons inline-block">person</i> <span id="viewBMI"></span></p>
                 </div>
                 <div class="mt-4">
                     <p><strong>Vaccinations:</strong></p>
                     <ul id="viewVaccinations" class="list-disc pl-5"></ul>
                 </div>
             </div>
-            <!-- Form Mode -->
-            <form id="healthForm" class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div>
-                    <label for="bloodGroup" class="block text-sm">Blood Group</label>
-                    <select id="bloodGroup" class="w-full p-2 border rounded">
+            <form id="healthForm" class="grid grid-cols-1 sm:grid-cols-3 gap-4 hidden">
+                <div class="border-2 border-gray-500 rounded-2xl p-3">
+                    <label for="bloodGroup" class="block text-sm font-semibold">Blood Group</label>
+                    <select id="bloodGroup" class="w-full p-2 border rounded" required>
                         <option value="">Select</option>
                         <option value="A+">A+</option>
                         <option value="A-">A-</option>
@@ -174,73 +161,139 @@
                         <option value="O-">O-</option>
                     </select>
                 </div>
-                <div>
-                    <label class="block text-sm">Blood Donating Preference</label>
+                <div class="border-2 border-gray-500 rounded-2xl p-3">
+                    <label class="block text-sm font-semibold">Blood Donating Preference</label>
                     <div class="flex gap-4">
-                        <label><input type="radio" name="bloodPreference" value="Always" checked> Always</label>
-                        <label><input type="radio" name="bloodPreference" value="Sometimes"> Sometimes</label>
-                        <label><input type="radio" name="bloodPreference" value="Never"> Never</label>
+                        <label><input type="radio" name="bloodPreference" value="Always" class="accentTextCol" required>
+                            Always</label>
+                        <label><input type="radio" name="bloodPreference" value="Sometimes" class="accentTextCol">
+                            Sometimes</label>
+                        <label><input type="radio" name="bloodPreference" value="Never" class="accentTextCol">
+                            Never</label>
                     </div>
                 </div>
-                <div>
-                    <label for="chronicDiseases" class="block text-sm">Chronic Diseases</label>
-                    <select id="chronicDiseases" multiple class="w-full p-2 border rounded">
-                        <option value="Diabetes">Diabetes</option>
-                        <option value="Hypertension">Hypertension</option>
-                        <option value="Asthma">Asthma</option>
-                        <option value="Heart Disease">Heart Disease</option>
-                        <option value="None">None</option>
-                    </select>
-                </div>
-                <div>
-                    <label class="block text-sm">Fitness Activity</label>
-                    <div class="flex gap-4">
-                        <label><input type="radio" name="fitnessActivity" value="Daily" checked> Daily</label>
-                        <label><input type="radio" name="fitnessActivity" value="Thrice a week"> Thrice a week</label>
-                        <label><input type="radio" name="fitnessActivity" value="Occasionally"> Occasionally</label>
-                        <label><input type="radio" name="fitnessActivity" value="Rarely"> Rarely</label>
+                <div class="border-2 border-gray-500 rounded-2xl p-3">
+                    <label for="chronicDiseases" class="block text-sm font-semibold">Chronic Diseases</label>
+                    <button type="button" id="chronicDiseaseDropdownButton"
+                        class="w-full bg-white border border-gray-300 rounded p-2 text-left">
+                        Select Chronic Diseases
+                    </button>
+                    <div id="dropdownMenu"
+                        class="absolute z-10 mt-1 w-full bg-white border border-gray-300 rounded shadow-lg hidden max-h-60 overflow-y-auto">
+                        <label class="flex items-center p-2 hover:bg-gray-100">
+                            <input type="checkbox" name="chronicDiseases" value="None" class="mr-2 accentTextCol"> None
+                        </label>
+                        <label class="flex items-center p-2 hover:bg-gray-100">
+                            <input type="checkbox" name="chronicDiseases" value="Arthritis" class="mr-2 accentTextCol">
+                            Arthritis
+                        </label>
+                        <label class="flex items-center p-2 hover:bg-gray-100">
+                            <input type="checkbox" name="chronicDiseases" value="Asthma" class="mr-2 accentTextCol">
+                            Asthma
+                        </label>
+                        <label class="flex items-center p-2 hover:bg-gray-100">
+                            <input type="checkbox" name="chronicDiseases" value="Back Pain" class="mr-2 accentTextCol">
+                            Back Pain
+                        </label>
+                        <label class="flex items-center p-2 hover:bg-gray-100">
+                            <input type="checkbox" name="chronicDiseases" value="Cancer" class="mr-2 accentTextCol">
+                            Cancer
+                        </label>
+                        <label class="flex items-center p-2 hover:bg-gray-100">
+                            <input type="checkbox" name="chronicDiseases" value="Diabetes" class="mr-2 accentTextCol">
+                            Diabetes
+                        </label>
+                        <label class="flex items-center p-2 hover:bg-gray-100">
+                            <input type="checkbox" name="chronicDiseases" value="Eye Problem"
+                                class="mr-2 accentTextCol"> Eye Problem
+                        </label>
+                        <label class="flex items-center p-2 hover:bg-gray-100">
+                            <input type="checkbox" name="chronicDiseases" value="GERD" class="mr-2 accentTextCol"> GERD
+                        </label>
+                        <label class="flex items-center p-2 hover:bg-gray-100">
+                            <input type="checkbox" name="chronicDiseases" value="Heart Disease"
+                                class="mr-2 accentTextCol"> Heart Disease
+                        </label>
+                        <label class="flex items-center p-2 hover:bg-gray-100">
+                            <input type="checkbox" name="chronicDiseases" value="Hearing Problem"
+                                class="mr-2 accentTextCol"> Hearing Problem
+                        </label>
+                        <label class="flex items-center p-2 hover:bg-gray-100">
+                            <input type="checkbox" name="chronicDiseases" value="Hypertension"
+                                class="mr-2 accentTextCol"> Hypertension
+                        </label>
+                        <label class="flex items-center p-2 hover:bg-gray-100">
+                            <input type="checkbox" name="chronicDiseases" value="Kidney Problem"
+                                class="mr-2 accentTextCol"> Kidney Problem
+                        </label>
+                        <label class="flex items-center p-2 hover:bg-gray-100">
+                            <input type="checkbox" name="chronicDiseases" value="Osteoporosis"
+                                class="mr-2 accentTextCol"> Osteoporosis
+                        </label>
+                        <label class="flex items-center p-2 hover:bg-gray-100">
+                            <input type="checkbox" name="chronicDiseases" value="Psoriasis" class="mr-2 accentTextCol">
+                            Psoriasis
+                        </label>
+                        <label class="flex items-center p-2 hover:bg-gray-100">
+                            <input type="checkbox" name="chronicDiseases" value="Stroke" class="mr-2 accentTextCol">
+                            Stroke
+                        </label>
+                        <label class="flex items-center p-2 hover:bg-gray-100">
+                            <input type="checkbox" name="chronicDiseases" value="TB" class="mr-2 accentTextCol"> TB
+                        </label>
                     </div>
                 </div>
-                <div>
-                    <label class="block text-sm">Sports Activity</label>
+                <div class="border-2 border-gray-500 rounded-2xl p-3">
+                    <label class="block text-sm font-semibold">Fitness Activity</label>
                     <div class="flex gap-4">
-                        <label><input type="radio" name="sportsActivity" value="Daily" checked> Daily</label>
-                        <label><input type="radio" name="sportsActivity" value="Thrice a week"> Thrice a week</label>
-                        <label><input type="radio" name="sportsActivity" value="Occasionally"> Occasionally</label>
-                        <label><input type="radio" name="sportsActivity" value="Rarely"> Rarely</label>
+                        <label><input type="radio" name="fitnessActivity" value="Daily" class="accentTextCol" required>
+                            Daily</label>
+                        <label><input type="radio" name="fitnessActivity" value="Thrice a week" class="accentTextCol">
+                            Thrice a week</label>
+                        <label><input type="radio" name="fitnessActivity" value="Occasionally" class="accentTextCol">
+                            Occasionally</label>
+                        <label><input type="radio" name="fitnessActivity" value="Rarely" class="accentTextCol">
+                            Rarely</label>
                     </div>
                 </div>
-                <div>
-                    <label class="block text-sm">Height</label>
+                <div class="border-2 border-gray-500 rounded-2xl p-3">
+                    <label class="block text-sm font-semibold">Sports Activity</label>
+                    <div class="flex gap-4">
+                        <label><input type="radio" name="sportsActivity" value="Daily" class="accentTextCol" required>
+                            Daily</label>
+                        <label><input type="radio" name="sportsActivity" value="Thrice a week" class="accentTextCol">
+                            Thrice a week</label>
+                        <label><input type="radio" name="sportsActivity" value="Occasionally" class="accentTextCol">
+                            Occasionally</label>
+                        <label><input type="radio" name="sportsActivity" value="Rarely" class="accentTextCol">
+                            Rarely</label>
+                    </div>
+                </div>
+                <div class="border-2 border-gray-500 rounded-2xl p-3">
+                    <label class="block text-sm font-semibold">Height</label>
                     <div class="flex gap-2">
-                        <input type="number" id="heightFeet" placeholder="Feet" class="w-1/2 p-2 border rounded"
-                            min="0">
+                        <input type="number" id="heightFeet" placeholder="Feet" class="w-1/2 p-2 border rounded" min="0"
+                            required>
                         <input type="number" id="heightInches" placeholder="Inches" class="w-1/2 p-2 border rounded"
-                            min="0" max="11">
+                            min="0" max="11" required>
                     </div>
                 </div>
-                <div>
-                    <label for="weight" class="block text-sm">Weight (kg)</label>
-                    <input type="number" id="weight" class="w-full p-2 border rounded" min="0">
+                <div class="border-2 border-gray-500 rounded-2xl p-3">
+                    <label for="weight" class="block text-sm font-semibold">Weight (kg)</label>
+                    <input type="number" id="weight" class="w-full p-2 border rounded" min="0" required>
                 </div>
-                <div>
-                    <label class="block text-sm">BMI</label>
+                <div class="border-2 border-gray-500 rounded-2xl p-3">
+                    <label class="block text-sm font-semibold">BMI</label>
                     <p><i class="material-icons inline-block">person</i> <span id="bmiDisplay">N/A</span></p>
                 </div>
-                <div class="col-span-1 sm:col-span-2">
-                    <label for="vaccinations" class="block text-sm">Vaccinations</label>
+                <div class="col-span-1 sm:col-span-2 border-2 border-gray-500 rounded-2xl p-3">
+                    <label for="vaccinations" class="block text-sm font-semibold">Vaccinations</label>
                     <select id="vaccinations" class="w-full p-2 border rounded">
                         <option value="">Select Vaccine</option>
-                        <option value="Pfizer">Pfizer (2 doses)</option>
-                        <option value="Moderna">Moderna (2 doses)</option>
-                        <option value="AstraZeneca">AstraZeneca (2 doses)</option>
-                        <option value="Johnson & Johnson">Johnson & Johnson (1 dose)</option>
-                        <option value="Polio">Polio</option>
-                        <option value="MMR">MMR</option>
                     </select>
                     <div id="selectedVaccines" class="mt-2"></div>
                 </div>
-                <div class="col-span-1 sm:col-span-2 flex justify-end gap-2">
+                <div class="col-span-1 sm:col-span-2 flex justify-end gap-2 font-semibold">
                     <button type="button" id="cancelEdit"
                         class="px-4 py-2 bg-gray-300 rounded hover:bg-gray-400">Cancel</button>
                     <button type="submit"
@@ -249,164 +302,230 @@
             </form>
         </div>
     </div>
-</body>
-<script>
-    const healthForm = document.getElementById('healthForm');
-    const viewMode = document.getElementById('viewMode');
-    const toggleEdit = document.getElementById('toggleEdit');
-    const cancelEdit = document.getElementById('cancelEdit');
-    const bmiDisplay = document.getElementById('bmiDisplay');
-    const heightFeet = document.getElementById('heightFeet');
-    const heightInches = document.getElementById('heightInches');
-    const weight = document.getElementById('weight');
-    const vaccinationsSelect = document.getElementById('vaccinations');
-    const selectedVaccinesDiv = document.getElementById('selectedVaccines');
+    <script>
+        const healthForm = document.getElementById('healthForm');
+        const viewMode = document.getElementById('viewMode');
+        const toggleEdit = document.getElementById('toggleEdit');
+        const cancelEdit = document.getElementById('cancelEdit');
+        const bmiDisplay = document.getElementById('bmiDisplay');
+        const heightFeet = document.getElementById('heightFeet');
+        const heightInches = document.getElementById('heightInches');
+        const weight = document.getElementById('weight');
+        const vaccinationsSelect = document.getElementById('vaccinations');
+        const selectedVaccinesDiv = document.getElementById('selectedVaccines');
+        const chronicDiseaseDropdownBtn = document.getElementById('chronicDiseaseDropdownButton');
+        const dropdownMenu = document.getElementById('dropdownMenu');
 
-    // Load data from localStorage
-    let healthData = JSON.parse(localStorage.getItem('healthDetails')) || {
-        bloodGroup: '',
-        bloodPreference: '',
-        chronicDiseases: [],
-        fitnessActivity: '',
-        sportsActivity: '',
-        heightFeet: '',
-        heightInches: '',
-        weight: '',
-        vaccinations: []
-    };
-
-    // Initialize form and view
-    function updateView() {
-        document.getElementById('viewBloodGroup').textContent = healthData.bloodGroup || 'N/A';
-        document.getElementById('viewBloodPreference').textContent = healthData.bloodPreference || 'N/A';
-        document.getElementById('viewChronicDiseases').textContent = healthData.chronicDiseases.length ? healthData.chronicDiseases.join(', ') : 'None';
-        document.getElementById('viewFitnessActivity').textContent = healthData.fitnessActivity || 'N/A';
-        document.getElementById('viewSportsActivity').textContent = healthData.sportsActivity || 'N/A';
-        document.getElementById('viewHeight').textContent = healthData.heightFeet ? `${healthData.heightFeet} ft ${healthData.heightInches || 0} in` : 'N/A';
-        document.getElementById('viewWeight').textContent = healthData.weight ? `${healthData.weight} kg` : 'N/A';
-        const bmi = calculateBMI();
-        document.getElementById('viewBMI').textContent = bmi ? bmi.toFixed(1) : 'N/A';
-
-        const vaccineList = document.getElementById('viewVaccinations');
-        vaccineList.innerHTML = '';
-        healthData.vaccinations.forEach(vaccine => {
-            const li = document.createElement('li');
-            const doses = vaccine.name.includes('Pfizer') || vaccine.name.includes('Moderna') || vaccine.name.includes('AstraZeneca') ? 2 : 1;
-            li.textContent = `${vaccine.name} (${doses > 1 ? 'Dose ' + vaccine.dose : ''}): ${vaccine.date ? 'Vaccinated (' + vaccine.date + ')' : 'Not Vaccinated'}`;
-            vaccineList.appendChild(li);
-        });
-    }
-
-    function updateForm() {
-        document.getElementById('bloodGroup').value = healthData.bloodGroup;
-        document.querySelector(`input[name="bloodPreference"][value="${healthData.bloodPreference}"]`)?.setAttribute('checked', true);
-        const chronicSelect = document.getElementById('chronicDiseases');
-        Array.from(chronicSelect.options).forEach(option => {
-            option.selected = healthData.chronicDiseases.includes(option.value);
-        });
-        document.querySelector(`input[name="fitnessActivity"][value="${healthData.fitnessActivity}"]`)?.setAttribute('checked', true);
-        document.querySelector(`input[name="sportsActivity"][value="${healthData.sportsActivity}"]`)?.setAttribute('checked', true);
-        heightFeet.value = healthData.heightFeet;
-        heightInches.value = healthData.heightInches;
-        weight.value = healthData.weight;
-        updateVaccinesList();
-        updateBMI();
-    }
-
-    function calculateBMI() {
-        const feet = parseFloat(heightFeet.value) || 0;
-        const inches = parseFloat(heightInches.value) || 0;
-        const kg = parseFloat(weight.value) || 0;
-        const heightM = (feet * 0.3048) + (inches * 0.0254);
-        if (heightM > 0 && kg > 0) {
-            return kg / (heightM * heightM);
-        }
-        return null;
-    }
-
-    function updateBMI() {
-        const bmi = calculateBMI();
-        bmiDisplay.textContent = bmi ? bmi.toFixed(1) : 'N/A';
-    }
-
-    function updateVaccinesList() {
-        selectedVaccinesDiv.innerHTML = '';
-        healthData.vaccinations.forEach((vaccine, index) => {
-            const div = document.createElement('div');
-            div.className = 'flex items-center gap-2 mt-2';
-            div.innerHTML = `
-                <span>${vaccine.name}${vaccine.dose ? ' (Dose ' + vaccine.dose + ')' : ''}</span>
-                <input type="date" class="p-2 border rounded" value="${vaccine.date || ''}">
-                <button type="button" class="text-red-500" onclick="removeVaccine(${index})">Remove</button>
-            `;
-            selectedVaccinesDiv.appendChild(div);
-        });
-    }
-
-    window.removeVaccine = function (index) {
-        healthData.vaccinations.splice(index, 1);
-        updateVaccinesList();
-    };
-
-    // Toggle between view and form
-    toggleEdit.addEventListener('click', () => {
-        viewMode.classList.toggle('hidden');
-        healthForm.classList.toggle('hidden');
-        if (!viewMode.classList.contains('hidden')) {
-            healthForm.reset();
-            updateForm();
-        }
-    });
-
-    cancelEdit.addEventListener('click', () => {
-        viewMode.classList.remove('hidden');
-        healthForm.classList.add('hidden');
-        updateForm();
-    });
-
-    // Handle form submission
-    healthForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        healthData = {
-            bloodGroup: document.getElementById('bloodGroup').value,
-            bloodPreference: document.querySelector('input[name="bloodPreference"]:checked')?.value || '',
-            chronicDiseases: Array.from(document.getElementById('chronicDiseases').selectedOptions).map(opt => opt.value),
-            fitnessActivity: document.querySelector('input[name="fitnessActivity"]:checked')?.value || '',
-            sportsActivity: document.querySelector('input[name="sportsActivity"]:checked')?.value || '',
-            heightFeet: heightFeet.value,
-            heightInches: heightInches.value,
-            weight: weight.value,
-            vaccinations: healthData.vaccinations
+        const vaccines = {
+            "Pfizer": 2,
+            "Moderna": 2,
+            "Covaxin": 3,
+            "AstraZeneca": 2,
+            "Johnson & Johnson": 1,
+            "Polio": 1,
+            "MMR": 1
         };
-        localStorage.setItem('healthDetails', JSON.stringify(healthData));
+
+        function populateVaccineOptions() {
+            const select = document.getElementById('vaccinations');
+            for (const [name, doses] of Object.entries(vaccines)) {
+                const option = document.createElement('option');
+                option.value = name;
+                option.textContent = `${name} (${doses} dose${doses > 1 ? 's' : ''})`;
+                select.appendChild(option);
+            }
+        }
+        populateVaccineOptions();
+
+        chronicDiseaseDropdownBtn.addEventListener('click', () => {
+            dropdownMenu.classList.toggle('hidden');
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!chronicDiseaseDropdownBtn.contains(e.target) && !dropdownMenu.contains(e.target)) {
+                dropdownMenu.classList.add('hidden');
+            }
+        });
+
+        let healthData = JSON.parse(localStorage.getItem('healthDetails')) || {
+            bloodGroup: '',
+            bloodPreference: 'Always',
+            chronicDiseases: [],
+            fitnessActivity: 'Daily',
+            sportsActivity: 'Daily',
+            heightFeet: '',
+            heightInches: '',
+            weight: '',
+            vaccinations: []
+        };
+
+        function calculateBMI() {
+            const feet = parseFloat(healthData.heightFeet) || 0;
+            const inches = parseFloat(healthData.heightInches) || 0;
+            const kg = parseFloat(healthData.weight) || 0;
+            const heightM = (feet * 0.3048) + (inches * 0.0254);
+            if (heightM > 0 && kg > 0) {
+                return kg / (heightM * heightM);
+            }
+            return null;
+        }
+
+        function updateBMI() {
+            const feet = parseFloat(heightFeet.value) || 0;
+            const inches = parseFloat(heightInches.value) || 0;
+            const kg = parseFloat(weight.value) || 0;
+            const heightM = (feet * 0.3048) + (inches * 0.0254);
+            const bmi = (heightM > 0 && kg > 0) ? kg / (heightM * heightM) : null;
+            bmiDisplay.textContent = bmi ? bmi.toFixed(1) : 'N/A';
+        }
+
+        function updateView() {
+            document.getElementById('viewBloodGroup').textContent = healthData.bloodGroup || 'N/A';
+            document.getElementById('viewBloodPreference').textContent = healthData.bloodPreference || 'N/A';
+            document.getElementById('viewChronicDiseases').textContent = healthData.chronicDiseases.length ? healthData.chronicDiseases.join(', ') : 'None';
+            document.getElementById('viewFitnessActivity').textContent = healthData.fitnessActivity || 'N/A';
+            document.getElementById('viewSportsActivity').textContent = healthData.sportsActivity || 'N/A';
+            document.getElementById('viewHeight').textContent = healthData.heightFeet ? `${healthData.heightFeet} ft ${healthData.heightInches || 0} in` : 'N/A';
+            document.getElementById('viewWeight').textContent = healthData.weight ? `${healthData.weight} kg` : 'N/A';
+            const bmi = calculateBMI();
+            document.getElementById('viewBMI').textContent = bmi ? bmi.toFixed(1) : 'N/A';
+
+            const vaccineList = document.getElementById('viewVaccinations');
+            vaccineList.innerHTML = '';
+            healthData.vaccinations.forEach(vaccine => {
+                const li = document.createElement('li');
+                const doses = vaccines[vaccine.name] || 1;
+                li.textContent = `${vaccine.name}${doses > 1 ? ' (Dose ' + vaccine.dose + ')' : ''}: ${vaccine.date ? 'Vaccinated (' + vaccine.date + ')' : 'Vaccinated'}`;
+                vaccineList.appendChild(li);
+            });
+        }
+
+        function updateForm() {
+            document.getElementById('bloodGroup').value = healthData.bloodGroup;
+            document.querySelector(`input[name="bloodPreference"][value="${healthData.bloodPreference}"]`)?.setAttribute('checked', 'checked');
+            document.querySelectorAll('input[name="chronicDiseases"]').forEach(checkbox => {
+                checkbox.checked = healthData.chronicDiseases.includes(checkbox.value);
+            });
+            document.querySelector(`input[name="fitnessActivity"][value="${healthData.fitnessActivity}"]`)?.setAttribute('checked', 'checked');
+            document.querySelector(`input[name="sportsActivity"][value="${healthData.sportsActivity}"]`)?.setAttribute('checked', 'checked');
+            heightFeet.value = healthData.heightFeet;
+            heightInches.value = healthData.heightInches;
+            weight.value = healthData.weight;
+            updateVaccinesList();
+            updateBMI();
+            updateChronicDiseaseButton();
+        }
+
+        function updateVaccinesList() {
+            selectedVaccinesDiv.innerHTML = '';
+            healthData.vaccinations.forEach((vaccine, index) => {
+                const div = document.createElement('div');
+                div.className = 'flex items-center gap-2 mt-2';
+                div.innerHTML = `
+                    <span class='font-semibold'>${vaccine.name}${vaccine.dose ? ' (Dose ' + vaccine.dose + ')' : ''}</span>
+                    <input type="date" class="p-2 border rounded vaccine-date" value="${vaccine.date || ''}">
+                    <button type="button" class="text-red-500 hover:text-red-700" onclick="removeVaccine(${index}, '${vaccine.name}')">Remove</button>
+                `;
+                selectedVaccinesDiv.appendChild(div);
+            });
+
+            document.querySelectorAll('.vaccine-date').forEach((input, index) => {
+                input.addEventListener('change', () => {
+                    healthData.vaccinations[index].date = input.value;
+                    localStorage.setItem('healthDetails', JSON.stringify(healthData));
+                    updateView();
+                });
+            });
+        }
+
+        function updateChronicDiseaseButton() {
+            const chronicDiseases = Array.from(document.querySelectorAll('input[name="chronicDiseases"]:checked')).map(checkbox => checkbox.value);
+            let text = chronicDiseases.join(', ');
+            chronicDiseaseDropdownBtn.textContent = text.length > 50 ? text.slice(0, 50) + '...' : text || 'Select Chronic Diseases';
+        }
+
+        window.removeVaccine = function (index, vaccName) {
+            healthData.vaccinations = healthData.vaccinations.filter(
+                v => !v.name.includes(vaccName)
+            );
+            localStorage.setItem('healthDetails', JSON.stringify(healthData));
+            updateVaccinesList();
+            updateView();
+        };
+
+        toggleEdit.addEventListener('click', () => {
+            viewMode.classList.toggle('hidden');
+            healthForm.classList.toggle('hidden');
+            updateForm();
+        });
+
+        cancelEdit.addEventListener('click', () => {
+            viewMode.classList.remove('hidden');
+            healthForm.classList.add('hidden');
+            updateForm();
+        });
+
+        healthForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const chronicDiseases = Array.from(document.querySelectorAll('input[name="chronicDiseases"]:checked')).map(checkbox => checkbox.value);
+            const bmi = calculateBMI();
+            if (bmi >= 30 && !chronicDiseases.includes('Obesity')) {
+                if (chronicDiseases.includes('None')) chronicDiseases.pop();
+                chronicDiseases.push('Obesity');
+            }
+            healthData = {
+                bloodGroup: document.getElementById('bloodGroup').value,
+                bloodPreference: document.querySelector('input[name="bloodPreference"]:checked')?.value || 'Always',
+                chronicDiseases: chronicDiseases,
+                fitnessActivity: document.querySelector('input[name="fitnessActivity"]:checked')?.value || 'Daily',
+                sportsActivity: document.querySelector('input[name="sportsActivity"]:checked')?.value || 'Daily',
+                heightFeet: heightFeet.value,
+                heightInches: heightInches.value,
+                weight: weight.value,
+                vaccinations: healthData.vaccinations
+            };
+            localStorage.setItem('healthDetails', JSON.stringify(healthData));
+            viewMode.classList.remove('hidden');
+            healthForm.classList.add('hidden');
+            updateView();
+        });
+
+        vaccinationsSelect.addEventListener('change', () => {
+            const value = vaccinationsSelect.value;
+            if (value && !healthData.vaccinations.some(v => v.name === value)) {
+                const doses = vaccines[value] || 1; // Default to 1 if not found
+                for (let i = 1; i <= doses; i++) {
+                    healthData.vaccinations.push({ name: value, dose: doses > 1 ? i : null, date: '' });
+                }
+                localStorage.setItem('healthDetails', JSON.stringify(healthData));
+                updateVaccinesList();
+                updateView();
+                vaccinationsSelect.value = '';
+            }
+        });
+
+        heightFeet.addEventListener('input', updateBMI);
+        heightInches.addEventListener('input', updateBMI);
+        weight.addEventListener('input', updateBMI);
+
+        document.querySelectorAll('input[name="chronicDiseases"]').forEach(checkbox => {
+            checkbox.addEventListener('change', () => {
+                if (checkbox.value === 'None' && checkbox.checked) {
+                    document.querySelectorAll('input[name="chronicDiseases"]').forEach(cb => {
+                        if (cb !== checkbox) cb.checked = false;
+                    });
+                } else if (checkbox.checked && checkbox.value !== 'None') {
+                    document.querySelector('input[name="chronicDiseases"][value="None"]').checked = false;
+                }
+                updateChronicDiseaseButton();
+            });
+        });
+
+        updateView();
+        updateForm();
         viewMode.classList.remove('hidden');
         healthForm.classList.add('hidden');
-        updateView();
-    });
-
-    // Handle vaccination selection
-    vaccinationsSelect.addEventListener('change', () => {
-        const value = vaccinationsSelect.value;
-        if (value && !healthData.vaccinations.some(v => v.name === value)) {
-            const doses = value.includes('Pfizer') || value.includes('Moderna') || value.includes('AstraZeneca') ? 2 : 1;
-            for (let i = 1; i <= doses; i++) {
-                healthData.vaccinations.push({ name: value, dose: doses > 1 ? i : null, date: '' });
-            }
-            updateVaccinesList();
-            vaccinationsSelect.value = '';
-        }
-    });
-
-    // Update BMI on height/weight change
-    heightFeet.addEventListener('input', updateBMI);
-    heightInches.addEventListener('input', updateBMI);
-    weight.addEventListener('input', updateBMI);
-
-    // Initialize
-    updateView();
-    updateForm();
-    viewMode.classList.remove('hidden');
-    healthForm.classList.add('hidden');
-</script>
+    </script>
+</body>
 
 </html>
